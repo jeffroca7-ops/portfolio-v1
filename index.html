@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Profile</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <nav>
+            <button class="menu-toggle">☰</button>
+
+            <a href="#profile">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            
+            <button id="theme-toggle">🌙</button>
+        </nav>
+
+        <div class="profile" id="profile">
+            <img src="image/gojo.jpg" alt="Jeffrey's profile picture"/>
+
+             <h1>Jeffrey Del Mundo</h1>
+             <p>Aspiring Front-End Developer</p>
+    </div>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate aspiring front-end developer with a keen interest in creating responsive and user-friendly web applications. I have experience in HTML, CSS, and JavaScript, and I am constantly learning new technologies to enhance my skills.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Passionate about web development and design</li>
+                <li>Proficient in HTML, CSS, and JavaScript</li>
+                <li>Experience with responsive design and cross-browser compatibility</li>
+                <li>Strong problem-solving skills and attention to detail</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+             <h2>Projects</h2>
+
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <h3>Color Picker</h3>
+                    <p>A simple color picker application built with HTML, CSS, and JavaScript.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>To-Do List</h3>
+                    <p>A simple task management application.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Calculator</h3>
+                    <p>A simple calculator built with HTML, CSS, and JavaScript.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            
+            </div>
+
+                <p id="project-message"></p>
+
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:jeffrey.del.mundo@example.com">email@example.com</a>
+            </p>
+
+        <form id="contact-form">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" autocomplete="name" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" placeholder="Enter your message" maxlength="100"></textarea>
+            <p id="char-count">0/100 characters</p>
+
+            <button type="submit" id="submit-btn">Send Message</button>
+        
+        </form>
+
+            <p id="form-message"></p>
+
+        </section>
+
+        <script src="script.js"></script>
+        
+    </body>
+</html>

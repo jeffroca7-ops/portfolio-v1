@@ -1,0 +1,308 @@
+body {
+    background-color: darkgray;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.profile {
+    text-align: center;
+    padding:30px;
+    background-color: white;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    max-width:800px;
+    box-shadow: 0 4px 10px gray;
+    scroll-margin-top: 80px;
+}
+
+ h2, h3 {
+    color: darkblue;
+}
+
+a{
+    color: white;
+    background-color: darkblue;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: pink;
+}
+
+.project-link{
+    color: white;
+    background-color: darkblue;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: lightblue;
+}
+
+h1 {
+    color: black;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+.skills-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+
+}
+
+.skills-list li {
+    list-style: none;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    /* flex-basis: 200px; */
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* flex: 1; */
+    flex: 1 1 200px;
+    
+}
+
+/*
+.skills-list li:first-child {
+    flex-grow: 2;
+}
+    
+.skills-list li:nth-child(3) {
+    flex-grow: 3;
+}
+*/ 
+
+.project-grid {
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    /* row-gap: 50px;
+    column-gap: 10px; */
+
+}
+
+.project-card {
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px gray;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-card:hover {
+    background-color: white;
+    transform: translateY(-5px) scale(1.02);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: darkblue;
+   
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: lightblue;
+}
+
+section,
+.profile {
+    scroll-margin-top: 80px;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        background-color: lightblue;
+    }
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    nav.open a {
+        display: block;
+    }
+
+}
+
+.project-card.selected {
+  background-color: lightblue;
+  transform: scale(1.02);
+}
+
+#contact label,
+#contact input,
+#contact textarea {
+    display: block;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+#contact textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#submit-btn {
+    background-color: darkblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit-btn:hover {
+    background-color: lightblue;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+body.dark-mode section {
+    background-color: #2a2a2a;
+    color: white;
+}
+
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: white;
+}
+
+#theme-toggle {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+body.dark-mode .project-card {
+    background-color: #3a3a3a;
+}
+
+body.dark-mode .project-card:hover {
+    background-color: #4a4a4a;
+}
+
+.project-card:hover {
+    background-color: white;
+    transform: translateY(-5px) scale(1.02);
+}
+
+body.dark-mode .project-link {
+    background-color: #555;
+}
+
+body.dark-mode .project-link:hover {
+    background-color: #777;
+}
+
+body.dark-mode #contact input,
+body.dark-mode #contact textarea {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode #contact input::placeholder,
+body.dark-mode #contact textarea::placeholder {
+    color: lightgray;
+}
+
+body.dark-mode #submit-btn {
+    background-color: #555;
+}
+
+body.dark-mode #submit-btn:hover {
+    background-color: #777;
+}
+
