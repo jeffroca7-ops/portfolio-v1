@@ -306,3 +306,6 @@ body.dark-mode #submit-btn:hover {
     background-color: #777;
 }
 
+body.dark-mode .profile p {
+    color: black;
+}
