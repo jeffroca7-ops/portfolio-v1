@@ -70,7 +70,10 @@ const projectLinks = document.querySelectorAll('.project-link');
 
 projectLinks.forEach(function(link) {
   link.addEventListener("click", function(event) {
-    event.preventDefault();
+
+    if (link.getAttribute("href") === "#") {
+      event.preventDefault();
+    }
   });
 });
 
